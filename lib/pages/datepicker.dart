@@ -7,12 +7,25 @@ class DatePickerWidget extends StatefulWidget {
 
 class _DatePickerWidgetState extends State<DatePickerWidget> {
   DateTime date=DateTime.now();
+<<<<<<< HEAD
+=======
+  var textController = TextEditingController();
+
+>>>>>>> 7b95c1e (Initial commit)
 
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return TextFormField(
       initialValue: '${date.month}/${date.day}/${date.year}' ,
+=======
+    textController.text='${date.month}/${date.day}/${date.year}';
+
+    return TextFormField(
+      controller: textController,
+
+>>>>>>> 7b95c1e (Initial commit)
       decoration: InputDecoration(
 
           prefixIcon: InkWell(
@@ -25,7 +38,11 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
   }
 
   Future pickDate(BuildContext context) async {
+<<<<<<< HEAD
     final initialDate = date;
+=======
+    final initialDate = DateTime.now();
+>>>>>>> 7b95c1e (Initial commit)
     final newDate = await showDatePicker(
       context: context,
       initialDate: initialDate,
@@ -35,7 +52,14 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
 
     if (newDate == null) return date;
 
+<<<<<<< HEAD
     setState(() => date = newDate);
+=======
+    setState(() {
+      date = newDate;
+      textController.text = '${date.month}/${date.day}/${date.year}';
+   });
+>>>>>>> 7b95c1e (Initial commit)
   }
   Widget contdc(String img) {
     return Container(
