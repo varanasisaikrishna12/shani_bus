@@ -25,7 +25,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
   }
 
   Future pickDate(BuildContext context) async {
-    final initialDate = DateTime.now();
+    final initialDate = date;
     final newDate = await showDatePicker(
       context: context,
       initialDate: initialDate,
