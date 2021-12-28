@@ -11,7 +11,7 @@
 2) Login page
      
      
-     ![image](https://user-images.githubusercontent.com/72256511/147389894-c47cbc92-8795-4677-9bd3-d46e4e643980.png)
+    ![image](https://user-images.githubusercontent.com/72256511/147389894-c47cbc92-8795-4677-9bd3-d46e4e643980.png)
      
 
 3)Home screen
