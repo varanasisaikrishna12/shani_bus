@@ -67,7 +67,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
         height: 30,
         margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(img), fit: BoxFit.fitWidth),
+          image: DecorationImage(image: AssetImage(img)),
         ));
   }
 }

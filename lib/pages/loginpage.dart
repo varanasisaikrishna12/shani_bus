@@ -87,7 +87,8 @@ class _loginpageState extends State<loginpage> {
                   MaterialPageRoute(builder: (context) => otppage()),
                 );
               },
-              child: Container(
+              child:
+              Container(
                   width: 138,
                   height: 48,
                   decoration: design.boxdec(),

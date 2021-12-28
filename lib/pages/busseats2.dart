@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
 
 
-class Busseats extends StatefulWidget {
-  const Busseats({Key? key}) : super(key: key);
+class Busseats2 extends StatefulWidget {
+  const Busseats2({Key? key}) : super(key: key);
 
   @override
   _BusseatsState createState() => _BusseatsState();
 }
 
-class _BusseatsState extends State<Busseats> {
+class _BusseatsState extends State<Busseats2> {
 
   var _chairStatus = [
     [1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 3, 1, 1],
     [1, 1, 1, 1, 1, 3, 3],
     [2, 2, 2, 1, 3, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1],
   ];
@@ -27,21 +24,21 @@ class _BusseatsState extends State<Busseats> {
     return Container(
       child: Column(
         children: <Widget>[
-          for (int i = 0; i < 9; i++)
+          for (int i = 0; i < 5; i++)
             Container(
               margin: EdgeInsets.only(top: i == 0 ? 50 : 0),
               child: Row(
                 children: <Widget>[
-                  for (int x = 1; x < 7; x++)
+                  for (int x = 1; x < 6; x++)
                     Expanded(
 
                       child:
-                      (x == 3)||(x == 4)
+                      (x == 3)||(x == 2)
                           ? Container(
 
                       )
                           : Container(
-
+                        height: 60,
                         margin: EdgeInsets.all(5),
                         child: _chairStatus[i][x - 1] == 1
                             ? availableChair(i,x-1)
@@ -69,7 +66,6 @@ class _BusseatsState extends State<Busseats> {
           });
         },
         child: Container(
-          height: 40.0,
 
 
           decoration: BoxDecoration(
@@ -90,8 +86,6 @@ class _BusseatsState extends State<Busseats> {
         });
       },
       child: Container(
-        height: 40.0,
-        width: 10.0,
 
         decoration: BoxDecoration(
 
@@ -107,8 +101,6 @@ class _BusseatsState extends State<Busseats> {
 
   Widget reservedChair(){
     return Container(
-      height: 40.0,
-      width: 10.0,
 
       decoration: BoxDecoration(
           color: Color.fromRGBO(15, 15, 15, 0.24),

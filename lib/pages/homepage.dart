@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shani_bus/pages/designs.dart';
 import 'package:shani_bus/pages/booking.dart';
 import 'package:shani_bus/pages/datepicker.dart';
+import 'package:shani_bus/pages/selection.dart';
 
 class homepage extends StatefulWidget {
   const homepage({Key? key}) : super(key: key);
@@ -63,7 +64,7 @@ class _homepageState extends State<homepage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => busbook()),
+                          MaterialPageRoute(builder: (context) => selection()),
                         );
                       },
                       child: Container(

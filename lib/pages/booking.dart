@@ -1,18 +1,35 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shani_bus/pages/busseats2.dart';
 import 'package:shani_bus/pages/designs.dart';
 import 'package:shani_bus/pages/busseats.dart';
 
 class busbook extends StatefulWidget {
-  const busbook({Key? key}) : super(key: key);
+   int a =0;
+   late String b ;
+    busbook(int c ,String d,{Key? key}) : super(key: key){
+
+    a =c;
+    b =d;
+
+  }
 
   @override
-  _busbookState createState() => _busbookState();
+  _busbookState createState() => _busbookState(a,b);
 }
 
 class _busbookState extends State<busbook> {
+  int a =0;
+  late String b ;
+  _busbookState(int c , String d){
+    a =c;
+    b =d;
+  }
+
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body:
       SingleChildScrollView(
@@ -20,12 +37,12 @@ class _busbookState extends State<busbook> {
           children: [
             Container(
               height: MediaQuery.of(context).size.height / 4,
-              color: Colors.yellow,
+              color: Color.fromRGBO(255, 205, 5, 1),
               child: Stack(
                 children: [
                   Positioned(
-                    left: 18,
-                    top: 18,
+                    left: 15,
+                    top: 24,
                     child: InkWell(
                         onTap: () {
                           Navigator.pop(context);
@@ -41,7 +58,7 @@ class _busbookState extends State<busbook> {
                         Container(
                           height: 20,
                         ),
-                        Text('Bharat Benz A/C Seater (2+2)',
+                        Text('Bharat Benz A/C $b (2+2)',
                             style: design.texst((18), FontWeight.w400))
                       ],
                     ),
@@ -57,11 +74,24 @@ class _busbookState extends State<busbook> {
             Container(
               height: 7,
             ),
+            (a == 1) ?
+              Container(
+                  padding: EdgeInsets.all(8),
+                  margin: EdgeInsets.fromLTRB(0,80,0,0),
+                  width: 300,
+                  decoration: BoxDecoration(
 
+                    border : Border.all(
+                      color: Color.fromRGBO(0, 0, 0, 1),
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Busseats()):
             Container(
                 padding: EdgeInsets.all(8),
                 margin: EdgeInsets.fromLTRB(0,80,0,0),
-                width: MediaQuery.of(context).size.width/1.5,
+                width: 300,
                 decoration: BoxDecoration(
 
                   border : Border.all(
@@ -70,20 +100,10 @@ class _busbookState extends State<busbook> {
                   ),
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: Busseats()),
+                child: Busseats2()),
             Container(
-                padding: EdgeInsets.all(8),
-                margin: EdgeInsets.fromLTRB(0,80,0,0),
-                width: MediaQuery.of(context).size.width/1.4,
-                decoration: BoxDecoration(
-
-                  border : Border.all(
-                    color: Color.fromRGBO(0, 0, 0, 1),
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Busseats())
+              height: 70,
+            )
 
           ],
         ),
